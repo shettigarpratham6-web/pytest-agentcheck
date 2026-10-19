@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "agentcheck-pytest-plugin"
-version = "0.1.0"
+version = "0.1.1"
 description = "Pytest plugin for testing non-deterministic AI agents with statistical assertions, fault injection, and record/replay cassettes"
 readme = "README.md"
 requires-python = ">=3.10"
