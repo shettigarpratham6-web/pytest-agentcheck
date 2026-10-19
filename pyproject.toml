@@ -1,0 +1,104 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pytest-agentcheck"
+version = "0.1.0"
+description = "Pytest plugin for testing non-deterministic AI agents with statistical assertions, fault injection, and record/replay cassettes"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "AgentCheck Contributors" },
+]
+keywords = [
+    "pytest",
+    "pytest-plugin",
+    "ai-agents",
+    "testing",
+    "llm",
+    "fault-injection",
+    "statistical-testing",
+    "record-replay",
+    "cassettes",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Pytest",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed",
+]
+dependencies = [
+    "pytest>=8.0",
+]
+
+[project.optional-dependencies]
+openai = [
+    "openai>=1.0.0",
+]
+langgraph = [
+    "langchain-core>=0.2.0",
+]
+otel = [
+    "opentelemetry-api>=1.20.0",
+]
+cli = [
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+]
+html = [
+    "jinja2>=3.1.0",
+]
+all = [
+    "pytest-agentcheck[cli,html,langgraph,openai,otel]",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-pytester",
+    "mypy>=1.10.0",
+    "ruff>=0.4.0",
+    "build",
+    "twine",
+]
+
+[project.urls]
+Homepage = "https://github.com/shettigarpratham6-web/pytest-agentcheck"
+Repository = "https://github.com/shettigarpratham6-web/pytest-agentcheck"
+Issues = "https://github.com/shettigarpratham6-web/pytest-agentcheck/issues"
+
+[project.entry-points.pytest11]
+agentcheck = "pytest_agentcheck.plugin"
+
+[project.scripts]
+agentcheck = "pytest_agentcheck.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pytest_agentcheck"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra -q"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
