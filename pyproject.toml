@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "pytest-agentcheck"
+name = "agentcheck-pytest-plugin"
 version = "0.1.0"
 description = "Pytest plugin for testing non-deterministic AI agents with statistical assertions, fault injection, and record/replay cassettes"
 readme = "README.md"
@@ -60,7 +60,12 @@ html = [
     "jinja2>=3.1.0",
 ]
 all = [
-    "pytest-agentcheck[cli,html,langgraph,openai,otel]",
+    "jinja2>=3.1.0",
+    "langchain-core>=0.2.0",
+    "openai>=1.0.0",
+    "opentelemetry-api>=1.20.0",
+    "rich>=13.0.0",
+    "typer>=0.9.0",
 ]
 dev = [
     "pytest>=8.0",

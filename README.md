@@ -1,10 +1,10 @@
-# pytest-agentcheck (AgentCheck)
+# agentcheck-pytest-plugin (AgentCheck)
 
 > Fast, deterministic pytest plugin for testing non-deterministic AI agents with statistical confidence, tool fault injection, and offline record/replay cassettes.
 
 [![CI](https://github.com/shettigarpratham6-web/pytest-agentcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/shettigarpratham6-web/pytest-agentcheck/actions/workflows/ci.yml)
-[![PyPI version](https://img.shields.io/pypi/v/pytest-agentcheck.svg)](https://pypi.org/project/pytest-agentcheck/)
-[![Python versions](https://img.shields.io/pypi/pyversions/pytest-agentcheck.svg)](https://pypi.org/project/pytest-agentcheck/)
+[![PyPI version](https://img.shields.io/pypi/v/agentcheck-pytest-plugin.svg)](https://pypi.org/project/agentcheck-pytest-plugin/)
+[![Python versions](https://img.shields.io/pypi/pyversions/agentcheck-pytest-plugin.svg)](https://pypi.org/project/agentcheck-pytest-plugin/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ---
@@ -57,14 +57,14 @@ test_customer_support_agent    18/18    100.0%     [82.4%, 100.0%]  PASS     STA
 
 ```bash
 # Core plugin (strictly zero heavy dependencies, only pytest)
-pip install pytest-agentcheck
+pip install agentcheck-pytest-plugin
 
 # With optional extras:
-pip install "pytest-agentcheck[openai]"     # OpenAI, Groq, Ollama client patcher
-pip install "pytest-agentcheck[langgraph]"  # LangGraph & LangChain callbacks
-pip install "pytest-agentcheck[otel]"       # OpenTelemetry / OpenInference ingestion
-pip install "pytest-agentcheck[cli]"        # Typer report & diff CLI
-pip install "pytest-agentcheck[all]"        # All extras
+pip install "agentcheck-pytest-plugin[openai]"     # OpenAI, Groq, Ollama client patcher
+pip install "agentcheck-pytest-plugin[langgraph]"  # LangGraph & LangChain callbacks
+pip install "agentcheck-pytest-plugin[otel]"       # OpenTelemetry / OpenInference ingestion
+pip install "agentcheck-pytest-plugin[cli]"        # Typer report & diff CLI
+pip install "agentcheck-pytest-plugin[all]"        # All extras
 ```
 
 ---
