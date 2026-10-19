@@ -64,7 +64,7 @@ all = [
 ]
 dev = [
     "pytest>=8.0",
-    "pytest-pytester",
+    
     "mypy>=1.10.0",
     "ruff>=0.4.0",
     "build",
